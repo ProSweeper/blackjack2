@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿var deck = new Deck();
+var player = new Player(isDealer: false);
+var dealer = new Player(isDealer: true);
+
+player.AddCardToHand(deck.DrawCard());
+player.AddCardToHand(deck.DrawCard());
+
+dealer.AddCardToHand(deck.DrawCard());
+dealer.AddCardToHand(deck.DrawCard());
+
+dealer.PrintHand();
+player.PrintHand();
+
